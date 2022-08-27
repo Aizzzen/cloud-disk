@@ -1,5 +1,5 @@
 import React from 'react';
-import appReducer, {hideLoader, showLoader} from "../../../store/reducers/appReducer";
+import appReducer, { hideLoader, showLoader } from '../../../store/reducers/appReducer';
 
 const state = {
     loader: false
@@ -8,7 +8,7 @@ const state = {
 describe('appReducer tests', () => {
 
     test('should return default state when passed an empty action', () => {
-        const testResult = appReducer(undefined, {type: ''})
+        const testResult = appReducer(undefined, { type: '' })
         expect(testResult).toEqual(state)
     })
 

@@ -7,7 +7,7 @@ import {
     isAuth, isVisible,
     loader,
     popupDisplay
-} from "../../../store/selectors/selectors";
+} from '../../../store/selectors/selectors';
 
 describe('testing selectors', () => {
 
@@ -121,11 +121,11 @@ describe('testing selectors', () => {
         expect(filesUpload({
             upload: {
                 files: [
-                    {id: 1, name: 'Music', type: 'dir'}
+                    { id: 1, name: 'Music', type: 'dir' }
                 ]
             }
         })).toStrictEqual([
-            {id: 1, name: 'Music', type: 'dir'}
+            { id: 1, name: 'Music', type: 'dir' }
         ])
     })
 
@@ -137,11 +137,11 @@ describe('testing selectors', () => {
         expect(files({
             file: {
                 files: [
-                    {id: 1, name: 'Music', type: 'dir'}
+                    { id: 1, name: 'Music', type: 'dir' }
                 ]
             }
         })).toStrictEqual([
-            {id: 1, name: 'Music', type: 'dir'}
+            { id: 1, name: 'Music', type: 'dir' }
         ])
     })
 

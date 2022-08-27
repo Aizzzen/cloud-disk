@@ -1,5 +1,5 @@
 import React from 'react';
-import userReducer, {logout, setUser} from "../../../store/reducers/userReducer";
+import userReducer, { logout, setUser } from '../../../store/reducers/userReducer';
 
 const state = {
     currentUser: {},
@@ -9,7 +9,7 @@ const state = {
 describe('userReducer tests', () => {
 
     test('set user', () => {
-       const action = setUser({email: 'test6@mail.ru', password: 'test6@mail.ru'})
+       const action = setUser({ email: 'test6@mail.ru', password: 'test6@mail.ru' })
        const newState = userReducer(state, action)
        expect(newState.currentUser).not.toStrictEqual({})
        expect(newState.isAuth).toBe(true)
@@ -21,7 +21,7 @@ describe('userReducer tests', () => {
         const action = logout()
         const newState = userReducer(state, action)
         expect(newState.currentUser).toStrictEqual({})
-        expect(newState.currentUser).not.toBe({id: 1, name: 'Vasya'})
+        expect(newState.currentUser).not.toBe({ id: 1, name: 'Vasya' })
         expect(newState.currentUser).not.toBe(null)
         expect(newState.isAuth).toBe(false)
         expect(newState.isAuth).not.toBe(true)

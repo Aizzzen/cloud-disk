@@ -6,13 +6,13 @@ import fileReducer, {
     setCurrentDir,
     setFiles, setFileView,
     setPopupDisplay
-} from "../../../store/reducers/fileReducer";
+} from '../../../store/reducers/fileReducer';
 
 const state = {
     files: [
-        {_id: 1, name: 'Sasha'},
-        {_id: 2, name: 'Masha'},
-        {_id: 3, name: 'Dasha'}
+        { _id: 1, name: 'Sasha' },
+        { _id: 2, name: 'Masha' },
+        { _id: 3, name: 'Dasha' }
     ],
     currentDir: null,
     popupDisplay: 'none',
@@ -24,13 +24,13 @@ describe('fileReducer tests', () => {
 
     test('set files from server', () => {
         const newFiles = [
-            {_id: 1, name: 'Sasha'},
-            {_id: 2, name: 'Masha'},
-            {_id: 3, name: 'Dasha'}
+            { _id: 1, name: 'Sasha' },
+            { _id: 2, name: 'Masha' },
+            { _id: 3, name: 'Dasha' }
         ]
         const action = setFiles(newFiles)
         const newState = fileReducer(state, action)
-        expect(newState.files[0]).toStrictEqual({_id: 1, name: 'Sasha'})
+        expect(newState.files[0]).toStrictEqual({ _id: 1, name: 'Sasha' })
         expect(newState.files[2].name).toStrictEqual('Dasha')
     })
 
@@ -42,9 +42,9 @@ describe('fileReducer tests', () => {
     })
 
     test('add file to app state', () => {
-        const action = addFile({_id: 4, name: 'Grisha'})
+        const action = addFile({ _id: 4, name: 'Grisha' })
         const newState = fileReducer(state, action)
-        expect(newState.files[3]).toStrictEqual({_id: 4, name: 'Grisha'})
+        expect(newState.files[3]).toStrictEqual({ _id: 4, name: 'Grisha' })
         expect(newState.files[3]._id).not.toBe(3)
     })
 

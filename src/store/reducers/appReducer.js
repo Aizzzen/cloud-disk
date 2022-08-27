@@ -5,12 +5,12 @@ const initialState = {
 
 export default function appReducer(state = initialState, action) {
     switch (action.type) {
-        case "SHOW_LOADER":
+        case 'SHOW_LOADER':
             return {
                 ...state,
                 loader: true
             }
-        case "HIDE_LOADER":
+        case 'HIDE_LOADER':
             return {
                 ...state,
                 loader: false
@@ -20,5 +20,5 @@ export default function appReducer(state = initialState, action) {
     }
 }
 
-export const showLoader = () => ({type: "SHOW_LOADER"})
-export const hideLoader = () => ({type: "HIDE_LOADER"})
+export const showLoader = () => ({ type: 'SHOW_LOADER' })
+export const hideLoader = () => ({ type: 'HIDE_LOADER' })

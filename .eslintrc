@@ -29,5 +29,23 @@
     "linebreak-style": ["error", "windows"],
     "default-param-last": "off",
     "function-call-argument-newline": "off"
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "plugins": [
+    "react"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "18.2.0"
+    }
   }
 }

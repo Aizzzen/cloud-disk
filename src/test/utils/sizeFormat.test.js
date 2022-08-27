@@ -1,4 +1,4 @@
-import sizeFormat from "../../utils/sizeFormat";
+import sizeFormat from '../../utils/sizeFormat';
 
 describe('size format values', () => {
     test('file size is n GB', () => {

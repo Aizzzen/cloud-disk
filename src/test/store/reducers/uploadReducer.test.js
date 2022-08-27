@@ -5,13 +5,13 @@ import uploadReducer, {
     hideUpLoader,
     removeUploadFile,
     showUpLoader
-} from "../../../store/reducers/uploadReducer";
+} from '../../../store/reducers/uploadReducer';
 
 const state = {
     files: [
-        {id: 1, name: 'Sasha', progress: 100},
-        {id: 2, name: 'Masha', progress: 100},
-        {id: 3, name: 'Dasha', progress: 90}
+        { id: 1, name: 'Sasha', progress: 100 },
+        { id: 2, name: 'Masha', progress: 100 },
+        { id: 3, name: 'Dasha', progress: 90 }
     ],
     isVisible: false
 }
@@ -35,7 +35,7 @@ describe('uploadReducer tests', () => {
     })
 
     test('add uploaded file', () => {
-        const action = addUploadFile({id: 4, name: 'Grisha'})
+        const action = addUploadFile({ id: 4, name: 'Grisha' })
         const newState = uploadReducer(state, action)
         expect(newState.files.length).toBe(4)
         expect(newState.files[3].name).toBe('Grisha')
@@ -52,7 +52,7 @@ describe('uploadReducer tests', () => {
     })
 
     test('file upload changes or progress', () => {
-        const action = changeUploadFile({id: 3, name: 'Dasha', progress: 100})
+        const action = changeUploadFile({ id: 3, name: 'Dasha', progress: 100 })
         const newState = uploadReducer(state, action)
         expect(newState.files.length).toBe(3)
         expect(newState.files[2].progress).toBe(100)
