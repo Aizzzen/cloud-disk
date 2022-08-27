@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Registration component tests Main tests 1`] = `
+<button
+  class="authorization__btn"
+>
+  Register
+</button>
+`;
+
+exports[`Registration component tests Main tests 2`] = `
+<div
+  class="authorization__header"
+>
+  Registration
+</div>
+`;
+
+exports[`Registration component tests Main tests 3`] = `
+<input
+  placeholder="Enter your email"
+  type="text"
+  value=""
+/>
+`;
+
+exports[`Registration component tests Main tests 4`] = `
+<input
+  placeholder="Enter your password"
+  type="password"
+  value=""
+/>
+`;
+
+exports[`Registration component tests Main tests 5`] = `
+<button
+  class="authorization__btn"
+>
+  Register
+</button>
+`;

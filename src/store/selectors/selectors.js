@@ -1,0 +1,10 @@
+export const isAuth = state => state?.user?.isAuth || false
+export const currentUser = state => state?.user?.currentUser || {}
+export const loader = state => state?.app?.loader || false
+export const currentDir = state => state?.file?.currentDir || null
+export const popupDisplay = state => state?.file?.popupDisplay || 'none'
+export const dirStack = state => state?.file?.dirStack || []
+export const fileView = state => state?.file?.view || 'list'
+export const isVisible = state => state?.upload?.isVisible || false
+export const filesUpload = state => state?.upload?.files || []
+export const files = state => state?.file?.files || []
