@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {useEffect, useState} from 'react';
 import './Disk.scss'
 import {useDispatch, useSelector} from "react-redux";

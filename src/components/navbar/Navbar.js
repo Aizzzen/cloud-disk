@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {useState} from 'react';
 import './Navbar.scss';
 import Logo from '../../assets/images/navbar-logo.svg';
