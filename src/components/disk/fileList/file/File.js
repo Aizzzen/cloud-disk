@@ -2,13 +2,14 @@ import React from 'react';
 import './File.scss'
 import dirLogo from '../../../../assets/images/dir.svg'
 import fileLogo from '../../../../assets/images/file.svg'
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {pushToStack, setCurrentDir} from "../../../../store/reducers/fileReducer";
 import {deleteFile, downloadFile} from "../../../../actions/file";
 import sizeFormat from "../../../../utils/sizeFormat";
-import {currentDir, fileView} from "../../../../store/selectors/selectors";
 
 const File = ({file}) => {
+    const currentDir = useSelector(state => state.file.currentDir)
+    const fileView = useSelector(state => state.file.view)
     const dispatch = useDispatch()
 
     function openDirHandler(file) {

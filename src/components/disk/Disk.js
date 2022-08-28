@@ -1,14 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import './Disk.scss'
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {getFiles, uploadFile} from "../../actions/file";
 import FileList from "./fileList/FileList";
 import Popup from "./Popup";
 import {setCurrentDir, setFileView, setPopupDisplay} from "../../store/reducers/fileReducer";
 import Uploader from "../uploader/Uploader";
-import {currentDir, dirStack, loader} from "../../store/selectors/selectors";
 
 const Disk = () => {
+    const currentDir = useSelector(state => state.file.currentDir)
+    const dirStack = useSelector(state => state.file.dirStack)
+    const loader = useSelector(state => state.app.loader)
     const dispatch = useDispatch()
     const [dragEnter, setDragEnter] = useState(false)
     const [sort, setSort] = useState('type')

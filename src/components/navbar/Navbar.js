@@ -8,9 +8,11 @@ import {getFiles, searchFiles} from "../../actions/file";
 import {showLoader} from "../../store/reducers/appReducer";
 import avatarLogo from '../../assets/images/avatar.svg';
 import {API_URL} from "../../config";
-import {currentDir, currentUser, isAuth} from "../../store/selectors/selectors";
 
 const Navbar = () => {
+    const currentDir = useSelector(state => state.file.currentDir)
+    const currentUser = useSelector(state => state.user.currentUser)
+    const isAuth = useSelector(state => state.user.isAuth)
     const dispatch = useDispatch()
     const [searchName, setSearchName] = useState('')
     const [searchTimeout, setSearchTimeout] = useState(false)

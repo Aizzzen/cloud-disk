@@ -3,9 +3,10 @@ import Input from "../../utils/input/Input";
 import {useDispatch, useSelector} from "react-redux";
 import {setPopupDisplay} from "../../store/reducers/fileReducer";
 import {createDir} from "../../actions/file";
-import {currentDir, popupDisplay} from "../../store/selectors/selectors";
 
 const Popup = () => {
+    const currentDir = useSelector(state => state.file.currentDir)
+    const popupDisplay = useSelector(state => state.file.popupDisplay)
     const [dirName, setDirName] = useState('')
     const dispatch = useDispatch()
 

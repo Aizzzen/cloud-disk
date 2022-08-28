@@ -2,9 +2,11 @@ import React from 'react';
 import './FileList.scss'
 import File from "./file/File";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
-import {files, fileView} from "../../../store/selectors/selectors";
+import {useSelector} from "react-redux";
 
 const FileList = () => {
+    const files = useSelector(state => state.file.files)
+    const fileView = useSelector(state => state.file.view)
 
     if(files.length === 0) {
         return (
